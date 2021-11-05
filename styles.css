@@ -11,6 +11,7 @@
   grid-template-rows: 1fr 4fr 2fr 1fr;
   grid-template-areas:
     "header header header"
+    "onehalf onehalf ."
     "content content side"
     "recomend recomend recomend"
     "footer footer footer";
@@ -56,17 +57,6 @@ li {
 img {
   width: 100%;
 }
-.nav1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 10px;
-  font-size: 1.125rem;
-  font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
-  line-height: 1.3125rem;
-  padding-left: 0;
-}
-
 .nav2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -85,7 +75,11 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
 }
+
 .side-grid > * {
   display: flex;
   justify-content: space-between;
@@ -125,4 +119,23 @@ p {
   letter-spacing: -0.0375rem;
   line-height: 1.5625rem;
   padding: 0.6875rem;
+}
+
+.onehalf {
+  top: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+  font-size: 1.125rem;
+  font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
+  line-height: 1.3125rem;
+
+  background-color: white;
+  grid-area: onehalf;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.nav1 {
+  padding-left: 0;
 }
