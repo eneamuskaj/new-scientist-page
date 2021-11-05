@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  height: 100vh;
+  padding: 10px;
+  margin: auto 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 4fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "content content side"
+    "recomend recomend recomend"
+    "footer footer footer";
+  grid-gap: 10px;
+}
+
+.one {
+  grid-area: header;
+}
+.two {
+  grid-area: content;
+}
+.three {
+  grid-area: side;
+}
+.four {
+  grid-area: recomend;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.five {
+  grid-area: footer;
+}
+.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.title > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+li {
+  display: inline;
+}
+
+img {
+  width: 100%;
+}
+
+.nav2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.nav2 > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f5f5f5;
+}
+
+.side-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.side-grid > * {
+  display: flex;
+  gap: 10px;
+  background-color: #f5f5f5;
+}
+
+.number {
+  font-size: 20px;
+}
+
+.five > ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+p {
+  font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
+}
+
+.main-header {
+  margin: 0;
+  font-size: 50px;
+}
