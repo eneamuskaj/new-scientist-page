@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+
   gap: 10px;
 }
 
@@ -88,7 +88,8 @@ img {
 }
 
 .number {
-  font-size: 20px;
+  font-size: 2rem;
+  padding-right: 10px;
 }
 
 .five > ul {
@@ -123,14 +124,9 @@ p {
 
 .onehalf {
   top: -1px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 10px;
   font-size: 1.125rem;
   font-family: Titillium Web, Helvetica, Trebuchet MS, Arial, sans-serif;
   line-height: 1.3125rem;
-
   background-color: white;
   grid-area: onehalf;
   position: -webkit-sticky;
@@ -138,4 +134,61 @@ p {
 }
 .nav1 {
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+}
+
+.title3 {
+  align-items: end;
+}
+
+@media (max-width: 700px) {
+  body > * {
+    width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "onehalf"
+      "content"
+      "recomend"
+      "side"
+      "footer";
+    grid-gap: 10px;
+    padding: 0;
+    margin: auto auto;
+    width: 100%;
+  }
+  .side-grid > * {
+    display: flex;
+    gap: 30px;
+  }
+  .four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .five > ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .nav2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+  }
+  .title1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title3 {
+    align-items: center;
+  }
 }
